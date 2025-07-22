@@ -7,7 +7,7 @@ load_dotenv()
 
 consumer = KafkaConsumer(
     'scraped_urls_topic',
-    bootstrap_servers='localhost:9092',
+    bootstrap_servers=os.getenv("BOOTSTRAP_SERVERS"),
     auto_offset_reset='earliest',
     enable_auto_commit=True,
     group_id='scrape-group',
@@ -15,11 +15,11 @@ consumer = KafkaConsumer(
 )
 
 conn = psycopg2.connect(
-    dbname='ScrapeMultiweb',
-    user='admin',
-    password='NoLimit123',
-    host='localhost',
-    port='5432'
+    dbname=os.getenv("DB_DAtABASE"),
+    user=os.getenv("DB_USERNAME"),
+    password=os.getenv("DB_PASSWORD"),
+    host=os.getenv("DB_HOST"),
+    port=os.getenv("DB_PORT")
 )
 cur = conn.cursor()
 
