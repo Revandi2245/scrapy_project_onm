@@ -1,0 +1,29 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+venv/
+.env
+.env.*
+
+# VSCode settings (optional, kalau kolaborasi bisa skip)
+.vscode/
+
+# Environment & config
+*.env
+*.env.local
+
+# Output / logs
+*.log
+*.sqlite3
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Scrapy generated output (optional)
+*.json
+*.csv
+*.jl
