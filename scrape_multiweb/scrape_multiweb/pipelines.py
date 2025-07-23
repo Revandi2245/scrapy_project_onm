@@ -15,8 +15,9 @@ load_dotenv()
 class KafkaPipeline:
     def __init__(self):
         self.topic = os.getenv("TOPIC_NAME")
+        bootstrap_servers = os.getenv("BOOTSTRAP_SERVERS", "")
         self.producer = KafkaProducer(
-            bootstrap_servers=os.getenv("BOOTSTRAP_SERVERS"),
+            bootstrap_servers=bootstrap_servers.split(","),
             value_serializer=lambda v: json.dumps(v).encode('utf-8')
         )
 
