@@ -14,6 +14,7 @@ load_dotenv()
 
 class KafkaPipeline:
     def __init__(self):
+        self.topic = os.getenv("TOPIC_NAME")
         self.producer = KafkaProducer(
             bootstrap_servers=os.getenv("BOOTSTRAP_SERVERS"),
             value_serializer=lambda v: json.dumps(v).encode('utf-8')
@@ -21,7 +22,7 @@ class KafkaPipeline:
 
     def process_item(self, item, spider):
         try:
-            self.producer.send('scraped_urls_topic', dict(item))
+            self.producer.send(self.topic, dict(item))
             spider.logger.info(f"[Kafka] Berhasil kirim: {item['url']}")
         except Exception as e:
             spider.logger.warning(f"[Kafka] Gagal kirim data: {e}")
