@@ -23,7 +23,7 @@ class KafkaPipeline:
     def process_item(self, item, spider):
         try:
             self.producer.send(self.topic, dict(item))
-            spider.logger.info(f"[Kafka] Berhasil kirim: {item['url']}")
+            spider.logger.info(f"[Kafka] Berhasil kirim: {item['link']}")
         except Exception as e:
             spider.logger.warning(f"[Kafka] Gagal kirim data: {e}")
         return item
