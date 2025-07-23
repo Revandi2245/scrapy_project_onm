@@ -59,8 +59,8 @@ DOWNLOAD_DELAY = 2
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   # "scrape_multiweb.pipelines.KafkaPipeline": 200,
-   "scrape_multiweb.pipelines.PostgresURLPipeline": 300,
+   "scrape_multiweb.pipelines.KafkaPipeline": 200,
+   # "scrape_multiweb.pipelines.PostgresURLPipeline": 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
