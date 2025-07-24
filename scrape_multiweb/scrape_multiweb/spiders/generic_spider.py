@@ -1,5 +1,6 @@
 import scrapy
 import json
+from datetime import datetime, timezone
 
 class GenericSpider(scrapy.Spider):
     name = "generic_spider"
@@ -66,6 +67,6 @@ class GenericSpider(scrapy.Spider):
         yield {
             "link": item.get("url"),
             "metadata": {
-            "created_at": item.get("created_at")
+            "created_at": datetime.now(timezone.utc).isoformat()
             }
         }
