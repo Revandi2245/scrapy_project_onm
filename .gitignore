@@ -22,7 +22,17 @@ venv/
 .DS_Store
 Thumbs.db
 
+# log dari cron job
+logs/
+
 # Scrapy generated output (optional)
 *.json
 *.csv
 *.jl
+
+# output directories
+output/
+
+# Django project
+django_project/
+scrapy_project/
