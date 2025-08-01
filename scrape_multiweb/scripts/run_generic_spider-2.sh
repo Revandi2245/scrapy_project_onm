@@ -14,10 +14,10 @@ else
     exit 1
 fi
 
-scrapy crawl generic_spider -a spider_name=ekonosia -a path=fixtures/ekonosia_config.json -o output/ekonosia.json &
-scrapy crawl generic_spider -a spider_name=malang-post -a path=fixtures/malangpost_config.json -o output/malangpost.json &
-scrapy crawl generic_spider -a spider_name=malangposcomedia -a path=fixtures/malangposcomedia_config.json -o output/malangposcomedia.json &
-scrapy crawl generic_spider -a spider_name=portaldesa -a path=fixtures/portaldesa_config.json -o output/portaldesa.json &
-scrapy crawl generic_spider -a spider_name=qoo10 -a path=fixtures/qoo10_config.json -o output/qoo10.json &
+scrapy crawl generic_spider -a spider_name=ekonosia -a path=fixtures/ekonosia_config.json &
+scrapy crawl generic_spider -a spider_name=malang-post -a path=fixtures/malangpost_config.json &
+scrapy crawl generic_spider -a spider_name=malangposcomedia -a path=fixtures/malangposcomedia_config.json &
+scrapy crawl generic_spider -a spider_name=portaldesa -a path=fixtures/portaldesa_config.json &
+scrapy crawl generic_spider -a spider_name=qoo10 -a path=fixtures/qoo10_config.json &
 
 wait
