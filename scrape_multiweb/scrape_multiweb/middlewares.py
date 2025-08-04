@@ -75,6 +75,10 @@ class ScrapeMultiwebDownloaderMiddleware:
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
+        proxy = spider.settings.get("PROXY")
+        if proxy:
+            request.meta['proxy'] = proxy
+            spider.logger.info(f"Using proxy: {proxy}")
         return None
 
     def process_response(self, request, response, spider):
