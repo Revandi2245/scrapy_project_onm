@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "ciayumajakuning",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "ciayumajakuning",
+      "domain": "ciayumajakuning.id",
+      "seed_urls": ["https://ciayumajakuning.id/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "div.mvp-feat5-mid-sub-wrap a::attr(href), div.mvp-feat5-small-wrap a::attr(href), div.mvp-widget-feat2-right a::attr(href), div.mvp-feat5-mid-main a::attr(href), div.mvp-feat5-mid-sub-story a::attr(href)"
+      }
+    }
+  }
+]

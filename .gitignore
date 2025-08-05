@@ -26,12 +26,12 @@ Thumbs.db
 logs/
 
 # Scrapy generated output (optional)
-*.json
 *.csv
 *.jl
 
 # output directories
 output/
+fixtures/
 
 # Django project
 django_project/

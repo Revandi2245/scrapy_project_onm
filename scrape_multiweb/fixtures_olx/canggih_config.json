@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "canggih",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Canggih",
+      "domain": "canggih.id",
+      "seed_urls": ["https://canggih.id/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "h3.entry-title.td-module-title a::attr(href)"
+      }
+    }
+  }
+]
