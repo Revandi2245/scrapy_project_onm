@@ -1,6 +1,8 @@
 #!/bin/bash
 cd "$(dirname "$0")/.."
 mkdir -p logs
+
+START_TIME=$(date +%s)
 echo "$(date): run_generic_spider_olx-1 started" >> logs/debug.log
 
 if [ -d "/home/revandi2245/scraper_project/venv" ]; then
@@ -14,28 +16,36 @@ else
     exit 1
 fi
 
-timeout 20m bash -c '
 scrapy crawl generic_spider -a spider_name=hargo -a path=fixtures/hargo_config.json &
 scrapy crawl generic_spider -a spider_name=hotnews -a path=fixtures/hotnews_config.json &
-scrapy crawl generic_spider -a spider_name=jakartaglobe -a path=fixtures/jakartaglobe_config.json -o output/jakartaglobe.json &
+# scrapy crawl generic_spider -a spider_name=jakartaglobe -a path=fixtures/jakartaglobe_config.json -o output/jakartaglobe.json &
 scrapy crawl generic_spider -a spider_name=karyaredaksi -a path=fixtures/karyaredaksi_config.json &
 scrapy crawl generic_spider -a spider_name=marketing -a path=fixtures/marketing_config.json &
+wait
+
 scrapy crawl generic_spider -a spider_name=pelitabatak -a path=fixtures/pelitabatak_config.json &
 scrapy crawl generic_spider -a spider_name=otobisnis -a path=fixtures/otobisnis_config.json &
 scrapy crawl generic_spider -a spider_name=rajabalapotomotif -a path=fixtures/rajabalapotomotif_config.json &
 scrapy crawl generic_spider -a spider_name=wartapol -a path=fixtures/wartapol_config.json &
 scrapy crawl generic_spider -a spider_name=vritta -a path=fixtures/vritta_config.json &
-scrapy crawl generic_spider -a spider_name=allrelease -a path=fixtures/allrelease_config.json -o output/allrelease.json &
+
+wait
+# scrapy crawl generic_spider -a spider_name=allrelease -a path=fixtures/allrelease_config.json -o output/allrelease.json &
 scrapy crawl generic_spider -a spider_name=bisnistrade -a path=fixtures/bisnistrade_config.json &
 scrapy crawl generic_spider -a spider_name=pojokindonesia -a path=fixtures/pojokindonesia_config.json &
-scrapy crawl generic_spider -a spider_name=selular -a path=fixtures/selular_config.json -o output/selular.json &
+# scrapy crawl generic_spider -a spider_name=selular -a path=fixtures/selular_config.json -o output/selular.json &
 scrapy crawl generic_spider -a spider_name=sonaindonesia -a path=fixtures/sonaindonesia_config.json &
 
 wait
-'
+
 EXIT_CODE=$?
+END_TIME=$(date +%s)
+ELAPSED_TIME=$((END_TIME - START_TIME))
+
 if [ $EXIT_CODE -eq 124 ]; then
     echo "$(date): run_generic_spider_olx-1 Timeout 20 menit tercapai, proses dihentikan otomatis" >> logs/debug.log
 else
     echo "$(date): run_generic_spider_olx-1 selesai dengan exit code $EXIT_CODE" >> logs/debug.log
 fi
+
+echo "$(date): Total waktu eksekusi: ${ELAPSED_TIME} detik" >> logs/debug.log

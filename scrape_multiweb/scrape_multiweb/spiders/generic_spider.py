@@ -43,30 +43,9 @@ class GenericSpider(scrapy.Spider):
             return
 
         for link in links:
-            yield response.follow(link, callback=self.parse_article)
-
-    def parse_article(self, response):
-        item = {}
-        item["url"] = response.url
-
-        for key, sel in self.selectors.items():
-            if key == "article_url_list":
-                continue  # Skip list selector
-
-            method = sel.get("method", "css")
-            query = sel.get("query")
-
-            if method == "css":
-                item[key] = response.css(query).get()
-            elif method == "xpath":
-                item[key] = response.xpath(query).get()
-            else:
-                self.logger.warning(f"Unknown method '{method}' for selector '{key}'")
-                item[key] = None
-
-        yield {
-            "link": item.get("url"),
-            "metadata": {
-            "created_at": datetime.now(timezone.utc).isoformat()
+            yield {
+                "link": response.urljoin(link),
+                "metadata": {
+                "created_at": datetime.now(timezone.utc).isoformat()
+                }
             }
-        }

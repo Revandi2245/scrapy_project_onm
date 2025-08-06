@@ -1,16 +1,14 @@
 [
   {
-    "spider_name": "otodiva",
+    "spider_name": "sinarharapan",
     "custom_settings": {
       "DOWNLOAD_DELAY": 1,
-      "CONCURRENT_REQUESTS": 4,
-      "DOWNLOAD_TIMEOUT": 30,
-      "RETRY_TIMES": 2
+      "CONCURRENT_REQUESTS": 4
     },
     "portal": {
-      "name": "Otodiva",
-      "domain": "otodiva.id",
-      "seed_urls": ["https://otodiva.id/"],
+      "name": "Sinar Harapan",
+      "domain": "sinarharapan.id",
+      "seed_urls": ["https://sinarharapan.id/"],
       "origin_type": "",
       "country": "Indonesia",
       "city": "",
@@ -22,7 +20,7 @@
     "selectors": {
       "article_url_list": {
         "method": "css",
-        "query": "h2.post-title a::attr(href)"
+        "query": "h2.entry-title a::attr(href)"
       }
     }
   }
