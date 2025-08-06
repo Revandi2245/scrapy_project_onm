@@ -20,7 +20,7 @@
     "selectors": {
       "article_url_list": {
         "method": "css",
-        "query": "h2.is-title.post-title.two_elementor_element a::text"
+        "query": "h2.post-title a::attr(href)"
       }
     }
   }

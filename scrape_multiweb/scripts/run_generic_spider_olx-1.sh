@@ -14,6 +14,7 @@ else
     exit 1
 fi
 
+timeout 20m bash -c '
 scrapy crawl generic_spider -a spider_name=hargo -a path=fixtures/hargo_config.json &
 scrapy crawl generic_spider -a spider_name=hotnews -a path=fixtures/hotnews_config.json &
 scrapy crawl generic_spider -a spider_name=jakartaglobe -a path=fixtures/jakartaglobe_config.json -o output/jakartaglobe.json &
@@ -31,3 +32,10 @@ scrapy crawl generic_spider -a spider_name=selular -a path=fixtures/selular_conf
 scrapy crawl generic_spider -a spider_name=sonaindonesia -a path=fixtures/sonaindonesia_config.json &
 
 wait
+'
+EXIT_CODE=$?
+if [ $EXIT_CODE -eq 124 ]; then
+    echo "$(date): run_generic_spider_olx-1 Timeout 20 menit tercapai, proses dihentikan otomatis" >> logs/debug.log
+else
+    echo "$(date): run_generic_spider_olx-1 selesai dengan exit code $EXIT_CODE" >> logs/debug.log
+fi
