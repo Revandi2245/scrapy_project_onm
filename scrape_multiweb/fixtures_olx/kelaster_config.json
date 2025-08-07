@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "kelaster",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "kelaster",
+      "domain": "kelaster.com",
+      "seed_urls": ["https://kelaster.com/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "h2.penci-entry-title.entry-title.grid-title a::attr(href)"
+      }
+    }
+  }
+]

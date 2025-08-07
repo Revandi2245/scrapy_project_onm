@@ -1,0 +1,27 @@
+[
+    {
+    "spider_name": "the8news",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "The8News",
+      "domain": "the8news.com",
+      "seed_urls": ["https://the8news.com/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "h2.post-title a::attr(href)"
+      }
+    }
+  }
+]

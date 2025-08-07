@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "sangkala",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Sangkala",
+      "domain": "sangkala.id",
+      "seed_urls": ["https://sangkala.id/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "h1.image-post-title a::attr(href)"
+      }
+    }
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "potretbikers",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Potret Bikers",
+      "domain": "potretbikers.com",
+      "seed_urls": ["https://potretbikers.com/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "h2.entry-title a::attr(href)"
+      }
+    }
+  }
+]
