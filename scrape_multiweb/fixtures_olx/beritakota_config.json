@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "beritakota",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "beritakota",
+      "domain": "beritakota.id",
+      "seed_urls": ["https://beritakota.id/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "div.indeks-item h2 a::attr(href)"
+      }
+    }
+  }
+]

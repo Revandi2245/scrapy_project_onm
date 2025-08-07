@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "bindo",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Binokular Indonesia",
+      "domain": "bindo.id",
+      "seed_urls": ["https://www.bindo.id/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "#mvp-feat-tab-col1 a::attr(href)"
+      }
+    }
+  }
+]

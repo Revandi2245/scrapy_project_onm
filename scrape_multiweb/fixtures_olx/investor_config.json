@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "investor",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Investor",
+      "domain": "investor.id",
+      "seed_urls": ["https://investor.id/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "div.col-4 > a.stretched-link::attr(href)"
+      }
+    }
+  }
+]

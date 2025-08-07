@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "iotomagz",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Iotomagz",
+      "domain": "iotomagz.com",
+      "seed_urls": ["https://iotomagz.com/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "h4.entry-title a.p-url::attr(href)"
+      }
+    }
+  }
+]

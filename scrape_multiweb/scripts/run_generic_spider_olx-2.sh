@@ -34,8 +34,8 @@ wait
 scrapy crawl generic_spider -a spider_name=mobitekno -a path=fixtures_olx/mobitekno_config.json &
 scrapy crawl generic_spider -a spider_name=otodiva -a path=fixtures_olx/otodiva_config.json &
 scrapy crawl generic_spider -a spider_name=sinarharapan -a path=fixtures_olx/sinarharapan_config.json &
-# scrapy crawl generic_spider -a spider_name=tabloidputrapos -a path=fixtures_olx/tabloidputrapos_config.json -o output/tabloidputrapos.json &
-# scrapy crawl generic_spider -a spider_name=speednride -a path=fixtures_olx/speednride_config.json -o output/speednride.json &
+scrapy crawl generic_spider -a spider_name=tabloidputrapos -a path=fixtures_olx/tabloidputrapos_config.json -o output/tabloidputrapos.json &
+scrapy crawl generic_spider -a spider_name=speednride -a path=fixtures_olx/speednride_config.json -o output/speednride.json &
 wait
 
 EXIT_CODE=$?

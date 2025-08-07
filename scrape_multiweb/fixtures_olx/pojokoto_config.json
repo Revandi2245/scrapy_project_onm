@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "pojokoto",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Pojokoto",
+      "domain": "pojokoto.com",
+      "seed_urls": ["https://pojokoto.com/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "h4.hk-listunit-title a.post-list-link::attr(href)"
+      }
+    }
+  }
+]
