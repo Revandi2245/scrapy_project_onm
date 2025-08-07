@@ -3,7 +3,7 @@ cd "$(dirname "$0")/.."
 mkdir -p logs
 
 START_TIME=$(date +%s)
-echo "$(date): run_generic_spider_olx-2 started" >> logs/debug.log
+echo "$(date): run_generic_spider_olx-3 started" >> logs/debug.log
 
 if [ -d "/home/revandi2245/scraper_project/venv" ]; then
     source /home/revandi2245/scraper_project/venv/bin/activate
