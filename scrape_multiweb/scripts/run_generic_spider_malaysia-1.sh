@@ -3,7 +3,7 @@ cd "$(dirname "$0")/.."
 mkdir -p logs
 
 START_TIME=$(date +%s)
-echo "$(date): run_generic_spider_olx-4 started" >> logs/debug.log
+echo "$(date): run_generic_spider_malaysia-1 started" >> logs/debug.log
 
 if [ -d "/home/revandi2245/scraper_project/venv" ]; then
     source /home/revandi2245/scraper_project/venv/bin/activate
@@ -49,9 +49,9 @@ END_TIME=$(date +%s)
 ELAPSED_TIME=$((END_TIME - START_TIME))
 
 if [ $EXIT_CODE -eq 124 ]; then
-    echo "$(date): run_generic_spider_olx-4 Timeout 10 menit tercapai, proses dihentikan otomatis" >> logs/debug.log
+    echo "$(date): run_generic_spider_malaysia-1 Timeout 10 menit tercapai, proses dihentikan otomatis" >> logs/debug.log
 else
-    echo "$(date): run_generic_spider_olx-4 selesai dengan exit code $EXIT_CODE" >> logs/debug.log
+    echo "$(date): run_generic_spider_malaysia-1 selesai dengan exit code $EXIT_CODE" >> logs/debug.log
 fi
 
-echo "$(date): Total waktu eksekusi generic_spider_olx-4: ${ELAPSED_TIME} detik" >> logs/debug.log
+echo "$(date): Total waktu eksekusi run_generic_spider_malaysia-1: ${ELAPSED_TIME} detik" >> logs/debug.log
