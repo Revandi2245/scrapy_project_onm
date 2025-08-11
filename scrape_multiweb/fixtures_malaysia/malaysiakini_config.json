@@ -1,0 +1,29 @@
+[
+  {
+    "spider_name": "malaysiakini",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4,
+      "DOWNLOAD_TIMEOUT": 30,
+      "RETRY_TIMES": 2
+    },
+    "portal": {
+      "name": "Malaysiakini",
+      "domain": "malaysiakini.com",
+      "seed_urls": ["https://www.malaysiakini.com/en/latest/news"],
+      "origin_type": "international",
+      "country": "Malaysia",
+      "city": "",
+      "language": "en",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "a[rel='bookmark']::attr(href)"
+      }
+    }
+  }
+]

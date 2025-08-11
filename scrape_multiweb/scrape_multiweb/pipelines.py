@@ -29,6 +29,11 @@ class KafkaPipeline:
             spider.logger.warning(f"[Kafka] Gagal kirim data: {e}")
         return item
 
+    def close_spider(self, spider):
+        spider.logger.info("[Kafka] Flushing & closing producer...")
+        self.producer.flush()
+        self.producer.close()
+
 
 class PostgresURLPipeline:
 

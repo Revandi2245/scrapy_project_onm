@@ -30,6 +30,8 @@ scrapy crawl generic_spider -a spider_name=sangkala -a path=fixtures_olx/sangkal
 
 scrapy crawl generic_spider -a spider_name=the8news -a path=fixtures_olx/the8news_config.json
 scrapy crawl generic_spider -a spider_name=tikta -a path=fixtures_olx/tikta_config.json
+scrapy crawl generic_spider -a spider_name=investing -a path=fixtures_olx/investing_config.json
+scrapy crawl generic_spider -a spider_name=investingid -a path=fixtures_olx/investingid_config.json
 
 
 wait

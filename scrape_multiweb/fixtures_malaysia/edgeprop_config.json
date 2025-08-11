@@ -1,0 +1,29 @@
+[
+  {
+    "spider_name": "edgeprop",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4,
+      "DOWNLOAD_TIMEOUT": 30,
+      "RETRY_TIMES": 2
+    },
+    "portal": {
+      "name": "EdgeProp",
+      "domain": "edgeprop.my",
+      "seed_urls": ["https://www.edgeprop.my/"],
+      "origin_type": "international",
+      "country": "Malaysia",
+      "city": "",
+      "language": "en",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "div.css-xe3djd a::attr(href)"
+      }
+    }
+  }
+]

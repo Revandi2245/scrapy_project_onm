@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "investing",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Investing",
+      "domain": "investing.com",
+      "seed_urls": ["https://www.investing.com/news/latest-news"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "en",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "a[data-test='article-title-link']::attr(href)"
+      }
+    }
+  }
+]
