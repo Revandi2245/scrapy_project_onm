@@ -26,7 +26,7 @@ scrapy crawl generic_spider -a spider_name=pojokoto -a path=fixtures_olx/pojokot
 scrapy crawl generic_spider -a spider_name=rockomotif -a path=fixtures_olx/rockomotif_config.json
 scrapy crawl generic_spider -a spider_name=spiritnesia -a path=fixtures_olx/spiritnesia_config.json 
 scrapy crawl generic_spider -a spider_name=tabloidpulsa -a path=fixtures_olx/tabloidpulsa_config.json
-scrapy crawl generic_spider -a spider_name=bindo -a path=fixtures_olx/bindo_config.json -o
+scrapy crawl generic_spider -a spider_name=bindo -a path=fixtures_olx/bindo_config.json
 scrapy crawl generic_spider -a spider_name=beritakota -a path=fixtures_olx/beritakota_config.json
 
 scrapy crawl generic_spider -a spider_name=extranews -a path=fixtures_olx/extranews_config.json
