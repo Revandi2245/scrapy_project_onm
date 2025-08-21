@@ -1,0 +1,50 @@
+[
+  {
+    "spider_name": "cnn_rss",
+    "portal": {
+      "name": "CNN Indonesia",
+      "domain": "cnnindonesia.com",
+      "rss_urls": ["https://www.cnnindonesia.com/nasional/rss"]
+    }
+  },
+  {
+    "spider_name": "antaranews_rss",
+    "portal": {
+      "name": "Antara News",
+      "domain": "antaranews.com",
+      "rss_urls": ["https://en.antaranews.com/rss/news.xml"]
+    }
+  },
+  {
+    "spider_name": "nytimes_rss",
+    "portal": {
+      "name": "The New York Times",
+      "domain": "nytimes.com",
+      "rss_urls": ["https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/destination/indonesia/rss.xml"]
+    }
+  },
+  {
+    "spider_name": "beritaindonesia_rss",
+    "portal": {
+      "name": "Berita Indonesia",
+      "domain": "beritaindonesia.net",
+      "rss_urls": ["https://feeds.indonesianews.net/rss/f9295dc05093c851"]
+    }
+  },
+  {
+    "spider_name": "viva_rss",
+    "portal": {
+      "name": "Viva",
+      "domain": "viva.com",
+      "rss_urls": ["https://www.viva.co.id/get/all"]
+    }
+  },
+  {
+    "spider_name": "sindonews_rss",
+    "portal": {
+      "name": "Sindo News",
+      "domain": "sindonews.com",
+      "rss_urls": ["https://www.sindonews.com/feed"]
+    }
+  }
+]
