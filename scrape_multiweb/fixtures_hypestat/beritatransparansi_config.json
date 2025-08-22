@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "beritatransparansi",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Berita Transparansi",
+      "domain": "beritatransparansi.co.id",
+      "seed_urls": ["https://beritatransparansi.co.id/category/otomotif/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "a[rel='bookmark']::attr(href)"
+      }
+    }
+  }
+]

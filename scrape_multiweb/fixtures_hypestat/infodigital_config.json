@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "infodigital",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Info Digital",
+      "domain": "infodigital.co.id",
+      "seed_urls": ["https://infodigital.co.id/category/gawai/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "a[itemprop='headline']::attr(href)"
+      }
+    }
+  }
+]

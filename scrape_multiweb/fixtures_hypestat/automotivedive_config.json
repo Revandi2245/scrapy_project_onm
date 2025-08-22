@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "automotivedive",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Automotive Dive",
+      "domain": "automotivedive.com",
+      "seed_urls": ["https://www.automotivedive.com/"],
+      "origin_type": "",
+      "country": "International",
+      "city": "",
+      "language": "en",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "a[href^='/news/']::attr(href)"
+      }
+    }
+  }
+]

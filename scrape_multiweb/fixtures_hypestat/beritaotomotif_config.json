@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "beritaotomotif",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Berita Otomotif",
+      "domain": "beritaotomotif.id",
+      "seed_urls": ["https://www.beritaotomotif.id/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "a[rel='bookmark']::attr(href)"
+      }
+    }
+  }
+]

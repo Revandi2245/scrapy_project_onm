@@ -46,5 +46,37 @@
       "domain": "sindonews.com",
       "rss_urls": ["https://www.sindonews.com/feed"]
     }
-  }
+  },
+    {
+        "spider_name": "tribunnews_rss",
+        "portal": {
+        "name": "Tribun News",
+        "domain": "tribunnews.com",
+        "rss_urls": ["https://www.tribunnews.com/rss"]
+        }
+    },
+    {
+        "spider_name": "cnbcindonesia_rss",
+        "portal": {
+        "name": "CNBC Indonesia",
+        "domain": "cnbcindonesia.com",
+        "rss_urls": ["https://www.cnbcindonesia.com/rss"]
+        }
+    },
+    {
+        "spider_name": "mediaindonesia_rss",
+        "portal": {
+        "name": "Media Indonesia",
+        "domain": "mediaindonesia.com",
+        "rss_urls": ["https://mediaindonesia.com/feed"]
+        }
+    },
+    {
+        "spider_name": "jpnn_rss",
+        "portal": {
+        "name": "JPNN",
+        "domain": "jpnn.com",
+        "rss_urls": ["https://www.jpnn.com/index.php?mib=rss"]
+        }
+    }
 ]

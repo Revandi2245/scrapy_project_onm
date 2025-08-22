@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "autofun",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Autofun",
+      "domain": "autofun.co.id",
+      "seed_urls": ["https://www.autofun.co.id/berita/terbaru"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "a[href*='/berita/']::attr(href)"
+      }
+    }
+  }
+]

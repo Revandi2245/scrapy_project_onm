@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "autonesian",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Autonesian",
+      "domain": "autonesian.com",
+      "seed_urls": ["https://autonesian.com/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "h2.cs-entry__title a::attr(href)"
+      }
+    }
+  }
+]

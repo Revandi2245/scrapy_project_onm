@@ -16,12 +16,16 @@ else
     exit 1
 fi
 
-scrapy crawl generic_rss_spider -a spider_name=cnn_rss -a path=fixtures_rss/config_example.json -o output/cnn_rss.json
-scrapy crawl generic_rss_spider -a spider_name=antaranews_rss -a path=fixtures_rss/config_example.json -o output/antaranews_rss.json
-scrapy crawl generic_rss_spider -a spider_name=nytimes_rss -a path=fixtures_rss/config_example.json -o output/nytimes_rss.json
-scrapy crawl generic_rss_spider -a spider_name=beritaindonesia_rss -a path=fixtures_rss/config_example.json -o output/beritaindonesia_rss.json
-scrapy crawl generic_rss_spider -a spider_name=viva_rss -a path=fixtures_rss/config_example.json -o output/viva_rss.json
-scrapy crawl generic_rss_spider -a spider_name=sindonews_rss -a path=fixtures_rss/config_example.json -o output/sindonews_rss.json
+scrapy crawl generic_rss_spider -a spider_name=cnn_rss -a path=fixtures_rss/config_example.json
+scrapy crawl generic_rss_spider -a spider_name=antaranews_rss -a path=fixtures_rss/config_example.json
+scrapy crawl generic_rss_spider -a spider_name=nytimes_rss -a path=fixtures_rss/config_example.json
+scrapy crawl generic_rss_spider -a spider_name=beritaindonesia_rss -a path=fixtures_rss/config_example.json
+scrapy crawl generic_rss_spider -a spider_name=viva_rss -a path=fixtures_rss/config_example.json
+scrapy crawl generic_rss_spider -a spider_name=sindonews_rss -a path=fixtures_rss/config_example.json
+scrapy crawl generic_rss_spider -a spider_name=tribunnews_rss -a path=fixtures_rss/config_example.json
+scrapy crawl generic_rss_spider -a spider_name=cnbcindonesia_rss -a path=fixtures_rss/config_example.json
+scrapy crawl generic_rss_spider -a spider_name=mediaindonesia_rss -a path=fixtures_rss/config_example.json
+scrapy crawl generic_rss_spider -a spider_name=jpnn_rss -a path=fixtures_rss/config_example.json
 
 wait
 
