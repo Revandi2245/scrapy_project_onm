@@ -37,4 +37,4 @@ else
     echo "$(date): run_hypestat-1-perday selesai dengan exit code $EXIT_CODE" >> logs/debug.log
 fi
 
-echo "$(date): Total waktu eksekusi generic_spider_hypestat-1: ${ELAPSED_TIME} detik" >> logs/debug.log
+echo "$(date): Total waktu eksekusi hypestat-1-perday: ${ELAPSED_TIME} detik" >> logs/debug.log
