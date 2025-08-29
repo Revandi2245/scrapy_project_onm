@@ -36,3 +36,15 @@ fixtures/
 # Django project
 django_project/
 scrapy_project/
+
+# setting files
+settings.py
+pipelines.py
+run_urls_gen_spider.sh
+urls_gen_spider.py
+Dockerfile
+docker-compose.yml
+metrics.py
+prometheus.yml
+db_exporter.py
+
