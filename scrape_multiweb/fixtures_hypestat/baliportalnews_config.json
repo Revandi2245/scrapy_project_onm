@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "baliportalnews",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Bali Portal News",
+      "domain": "baliportalnews.com",
+      "seed_urls": ["https://baliportalnews.com/category/otomotif/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "a[rel='bookmark']::attr(href)"
+      }
+    }
+  }
+]

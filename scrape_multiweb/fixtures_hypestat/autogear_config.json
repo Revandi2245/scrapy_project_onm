@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "autogear",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Autogear",
+      "domain": "autogear.id",
+      "seed_urls": ["https://www.autogear.id/autonews"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "div.post-content h2 a::attr(href)"
+      }
+    }
+  }
+]

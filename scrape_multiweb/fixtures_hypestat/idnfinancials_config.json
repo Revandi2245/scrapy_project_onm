@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "idnfinancials",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "IDN Financials",
+      "domain": "idnfinancials.com",
+      "seed_urls": ["https://www.idnfinancials.com/id/news"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "div.col-6.mt-4.ln-item a::attr(href)"
+      }
+    }
+  }
+]
