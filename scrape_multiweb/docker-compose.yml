@@ -51,5 +51,62 @@ services:
     depends_on:
       - kafka
 
+  # --- Monitoring stack ---
+
+  kafka-exporter:
+    image: danielqsj/kafka-exporter:latest
+    container_name: kafka-exporter
+    restart: unless-stopped
+    command:
+      - "--kafka.server=kafka:${KAFKA_INTERNAL_PORT}"
+    ports:
+      - "9308:9308"
+    depends_on:
+      - kafka
+
+  db-exporter:
+    build:
+      context: ./exporters
+      dockerfile: Dockerfile
+    container_name: db-exporter
+    restart: unless-stopped
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_PORT: ${DB_PORT}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      ARTICLES_TABLE: ${ARTICLES_TABLE}
+      SOURCE_COLUMN: ${SOURCE_COLUMN}
+      CREATED_AT_COLUMN: ${CREATED_AT_COLUMN}
+    ports:
+      - "${DB_EXPORTER_PORT}:8000"
+    depends_on:
+      - db
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    restart: unless-stopped
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "${PROMETHEUS_PORT}:9090"
+    depends_on:
+      - kafka-exporter
+      - db-exporter
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: unless-stopped
+    environment:
+      - GF_SECURITY_ADMIN_USER=${GF_SECURITY_ADMIN_USER}
+      - GF_SECURITY_ADMIN_PASSWORD=${GF_SECURITY_ADMIN_PASSWORD}
+    ports:
+      - "${GRAFANA_PORT}:3000"
+    depends_on:
+      - prometheus
+
 volumes:
   pgdata:

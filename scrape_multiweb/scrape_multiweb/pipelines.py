@@ -58,11 +58,19 @@ class PostgresURLPipeline:
         self.cur = self.connection.cursor()
 
         ## Create quotes table if none exists
+        # self.cur.execute("""
+        #     CREATE TABLE IF NOT EXISTS scraped_urls (
+        #         id SERIAL PRIMARY KEY,
+        #         url TEXT UNIQUE,
+        #         domain TEXT
+        #     )
+        # """)
         self.cur.execute("""
-            CREATE TABLE IF NOT EXISTS scraped_urls (
+            CREATE TABLE IF NOT EXISTS scraped_links (
                 id SERIAL PRIMARY KEY,
-                url TEXT UNIQUE,
-                domain TEXT
+                link TEXT UNIQUE,
+                domain TEXT,
+                metadata JSONB
             )
         """)
         self.connection.commit()
@@ -74,11 +82,23 @@ class PostgresURLPipeline:
 
     def process_item(self, item, spider):
         try:
+            # self.cur.execute(
+            #     "INSERT INTO scraped_urls (url, domain) VALUES (%s, %s) ON CONFLICT (url) DO NOTHING",
+            #     (item["url"], item["domain"])
+            # )
             self.cur.execute(
-                "INSERT INTO scraped_urls (url, domain) VALUES (%s, %s) ON CONFLICT (url) DO NOTHING",
-                (item["url"], item["domain"])
+                """
+                INSERT INTO scraped_links (link, domain, metadata)
+                VALUES (%s, %s, %s)
+                ON CONFLICT (link) DO NOTHING
+                """,
+                (
+                    item.get("link"),
+                    item.get("domain"),
+                    json.dumps(item.get("metadata"))
+                )
             )
         except Exception as e:
-            spider.logger.warning(f"[DB] Gagal simpan URL: {item.get('url')} | Error: {e}")
+            self.connection.rollback()
+            spider.logger.warning(f"[DB] Gagal simpan URL: {item.get('link')} | Error: {e}")
         return item
-
