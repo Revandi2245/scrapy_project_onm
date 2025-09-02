@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "zigwheels",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Zigwheels",
+      "domain": "zigwheels.co.id",
+      "seed_urls": ["https://www.zigwheels.co.id/motovaganza/"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "a.heading-h2.m-sm-b::attr(href)"
+      }
+    }
+  }
+]

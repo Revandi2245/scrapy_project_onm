@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "viva",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Viva",
+      "domain": "viva.co.id",
+      "seed_urls": ["https://www.viva.co.id/otomotif"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "a.article-list-title::attr(href)"
+      }
+    }
+  }
+]

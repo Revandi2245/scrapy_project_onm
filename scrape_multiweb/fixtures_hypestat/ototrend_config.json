@@ -1,0 +1,27 @@
+[
+  {
+    "spider_name": "ototrend",
+    "custom_settings": {
+      "DOWNLOAD_DELAY": 1,
+      "CONCURRENT_REQUESTS": 4
+    },
+    "portal": {
+      "name": "Ototrend",
+      "domain": "ototrend.com",
+      "seed_urls": ["https://ototrend.com"],
+      "origin_type": "",
+      "country": "Indonesia",
+      "city": "",
+      "language": "id",
+      "is_active": true,
+      "robots_txt": "",
+      "sitemap_url": ""
+    },
+    "selectors": {
+      "article_url_list": {
+        "method": "css",
+        "query": "div.mnwall-item h3.mnwall-title a::attr(href)"
+      }
+    }
+  }
+]
